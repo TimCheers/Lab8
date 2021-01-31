@@ -195,7 +195,7 @@ int main()
 	deletion(st, N);
 	if (N==0)
 	{
-		cout << "Удаление невозможно!" << endl;
+		cout << "Добавление невозможно!" << endl;
 	}
 	else
 	{
