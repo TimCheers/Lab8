@@ -13,7 +13,7 @@ struct Student
 void CorNumb(Student*& st, int N, int k)
 {
 	system("chcp 1251>nul");
-	int  dat01 = -1, dat02 = -1, dat03 = -1, reiting1 = -1;
+	int  dat01 = -1, dat02 = -1, dat03 = -1, rating1 = -1;
 	for (int i = k; i < N; i++)
 	{
 		cout << endl;
@@ -38,23 +38,23 @@ void CorNumb(Student*& st, int N, int k)
 		while (st[i].rating < 0)
 		{
 			cout << "Введите рейтинг:\t";
-			cin >> reiting1;
-			if (reiting1 < 0)
+			cin >> rating1;
+			if (rating1 < 0)
 			{
 				cout << "Введены некоректные данные!" << endl;
 			}
-			st[i].rating = reiting1;
+			st[i].rating = rating1;
 		}
 		dat01 = -1;
 		dat02 = -1;
 		dat03 = -1;
-		reiting1 = -1;
+		rating1 = -1;
 	}
 }
 void CorNumb2(Student*& st2, int N, int k)
 {
 	system("chcp 1251>nul");
-	int  dat01 = -1, dat02 = -1, dat03 = -1, reiting1 = -1;
+	int  dat01 = -1, dat02 = -1, dat03 = -1, rating1 = -1;
 	for (int i = k; i < N; i++)
 	{
 		cout << endl;
@@ -79,17 +79,17 @@ void CorNumb2(Student*& st2, int N, int k)
 		while (st2[i].rating < 0)
 		{
 			cout << "Введите рейтинг:\t";
-			cin >> reiting1;
-			if (reiting1 < 0)
+			cin >> rating1;
+			if (rating1 < 0)
 			{
 				cout << "Введены некоректные данные!" << endl;
 			}
-			st2[i].rating = reiting1;
+			st2[i].rating = rating1;
 		}
 		dat01 = -1;
 		dat02 = -1;
 		dat03 = -1;
-		reiting1 = -1;
+		rating1 = -1;
 	}
 }
 void deletion(Student *&st, int &N)
