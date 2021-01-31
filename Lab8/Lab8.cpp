@@ -5,10 +5,10 @@ struct Student
 {
 	void Show()
 	{
-		cout << famil << name << endl << adres << endl << dat1 <<"."<< dat2 << "." << dat3 << endl << reiting << endl;
+		cout << famil << name << endl << adres << endl << dat1 <<"."<< dat2 << "." << dat3 << endl << rating << endl;
 	}
 	string name, adres, famil;
-	int dat1, dat2, dat3, reiting;
+	int dat1, dat2, dat3, rating;
 };
 void CorNumb(Student*& st, int N, int k)
 {
@@ -35,7 +35,7 @@ void CorNumb(Student*& st, int N, int k)
 			st[i].dat2 = dat02;
 			st[i].dat3 = dat03;
 		}
-		while (st[i].reiting < 0)
+		while (st[i].rating < 0)
 		{
 			cout << "Введите рейтинг:\t";
 			cin >> reiting1;
@@ -43,7 +43,7 @@ void CorNumb(Student*& st, int N, int k)
 			{
 				cout << "Введены некоректные данные!" << endl;
 			}
-			st[i].reiting = reiting1;
+			st[i].rating = reiting1;
 		}
 		dat01 = -1;
 		dat02 = -1;
@@ -76,7 +76,7 @@ void CorNumb2(Student*& st2, int N, int k)
 			st2[i].dat2 = dat02;
 			st2[i].dat3 = dat03;
 		}
-		while (st2[i].reiting < 0)
+		while (st2[i].rating < 0)
 		{
 			cout << "Введите рейтинг:\t";
 			cin >> reiting1;
@@ -84,7 +84,7 @@ void CorNumb2(Student*& st2, int N, int k)
 			{
 				cout << "Введены некоректные данные!" << endl;
 			}
-			st2[i].reiting = reiting1;
+			st2[i].rating = reiting1;
 		}
 		dat01 = -1;
 		dat02 = -1;
@@ -123,7 +123,7 @@ void deletion(Student *&st, int &N)
 					st[l].adres = st[l + 1].adres;
 					st[l].famil = st[l + 1].famil;
 					st[l].name = st[l + 1].name;
-					st[l].reiting = st[l + 1].reiting;
+					st[l].rating = st[l + 1].rating;
 				}
 				N--;
 			}
@@ -138,7 +138,7 @@ void deletion(Student *&st, int &N)
 				st[l].adres = st[l + 1].adres;
 				st[l].famil = st[l + 1].famil;
 				st[l].name = st[l + 1].name;
-				st[l].reiting = st[l + 1].reiting;
+				st[l].rating = st[l + 1].rating;
 			}
 			N--;
 		}
@@ -163,7 +163,7 @@ void addition(Student*& st, Student*& st2, int& N)
 				st2[j].adres = st[j].adres;
 				st2[j].famil = st[j].famil;
 				st2[j].name = st[j].name;
-				st2[j].reiting = st[j].reiting;
+				st2[j].rating = st[j].rating;
 			}
 			cout << "Введите параметры нвого студента" << endl;
 			CorNumb2(st2, i+1, i);
